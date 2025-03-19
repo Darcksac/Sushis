@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushitos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="bg-orange-900 p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="images/LogoPeki1.png" alt="Logo" class="h-10 w-10 mr-3">
+            <h1 class="text-2xl font-bold">PekiTeki</h1>
+        </div>
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="text-white hover:text-gray-400">Inicio</a></li>
+            <li><a href="productos.html" class="text-white hover:text-gray-400">Productos</a></li>
+            <li><a href="nosotros.html" class="text-white hover:text-gray-400">Nosotros</a></li>
+            <li><a href="#listaPedido" class="text-white hover:text-gray-400">Tu Pedido</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mx-auto p-5">
+        <h1 class="text-3xl font-bold text-center mb-5">Productos</h1>
+        <div id="productos" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Productos -->
+            <div class="bg-orange-800 p-4 rounded-lg shadow-lg text-center">
+                <img src="images/Empanizado2.png" class="w-full h-40 object-cover rounded-md" alt="Producto 1">
+                <h2 class="text-xl font-bold mt-2">Sushi Empanizado</h2>
+                <p class="text-gray-400"><p>Interior (Aguacate, camaron y pepino)</p>
+                <p>Exterior (Queso, philadelphia y empanizado)</p>
+                <p class="text-lg font-semibold mt-2">$80</p>
+                <button onclick="agregarProducto('Sushi Empanizado', 80)" class="mt-2 bg-gray-600 px-4 py-2 rounded-lg">Agregar</button>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center">
+                <img src="images/avocado.png" class="w-full h-40 object-cover rounded-md" alt="Producto 2">
+                <h2 class="text-xl font-bold mt-2">Sushi Avocado</h2>
+                <p class="text-gray-400">Interior (Aguacate, philadelphia, zanahoria y pepino)</p>
+                <p>Exterior (Aguacate y salsa de anguila)</p>
+                <p class="text-lg font-semibold mt-2">$80</p>
+                <button onclick="agregarProducto('Sushi Avocado', 80)" class="mt-2 bg-orange-500 px-4 py-2 rounded-lg">Agregar</button>
+            </div>
+            <div class="bg-orange-800 p-4 rounded-lg shadow-lg text-center">
+                <img src="images/avocado.png" class="w-full h-40 object-cover rounded-md" alt="Producto 2">
+                <h2 class="text-xl font-bold mt-2">Sushi Manchego</h2>
+                <p class="text-gray-400">Interior (Surimi toreado y aguacate)</p>
+                <p>Exterior (Queso horneado y salsa de chipotle)</p>
+                <p class="text-lg font-semibold mt-2">$120</p>
+                <button onclick="agregarProducto('Sushi Manchego', 120)" class="mt-2 bg-gray-600 px-4 py-2 rounded-lg">Agregar</button>
+            </div>
+        </div>
+        
+        <!-- Lista de Pedido -->
+        <div class="mt-6 p-4 bg-gray-900 rounded-lg">
+            <h2 class="text-2xl font-bold">Tu Pedido</h2>
+            <ul id="listaPedido" class="mt-2 text-gray-400"></ul>
+            <button onclick="enviarPedido()" class="mt-4 bg-green-500 px-6 py-2 rounded-lg">Enviar por WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        let pedido = [];
+
+        function agregarProducto(nombre, precio) {
+            pedido.push({ nombre, precio });
+            actualizarLista();
+        }
+
+        function actualizarLista() {
+            let lista = document.getElementById('listaPedido');
+            lista.innerHTML = '';
+            pedido.forEach((item, index) => {
+                lista.innerHTML += `<li>${item.nombre} - $${item.precio} <button onclick="eliminarProducto(${index})" class="text-red-500">X</button></li>`;
+            });
+        }
+
+        function eliminarProducto(index) {
+            pedido.splice(index, 1);
+            actualizarLista();
+        }
+
+        function enviarPedido() {
+            let mensaje = 'Hola, quiero hacer un pedido:\n';
+            pedido.forEach(item => {
+                mensaje += `- ${item.nombre} - $${item.precio}\n`;
+            });
+            let url = `https://wa.me/5213325632017?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

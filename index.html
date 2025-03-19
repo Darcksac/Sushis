@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="em">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title>PekiTeki</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <header>
+        <nav class="bg-orange-900 p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/LogoPeki1.png" alt="Logo" class="h-20 w-20 mr-3">
+                <h1 class="text-2xl font-bold"></h1>
+            </div>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="text-white hover:text-gray-400">Inicio</a></li>
+                <li><a href="productos.html" class="text-white hover:text-gray-400">Productos</a></li>
+                <li><a href="nosotros.html" class="text-white hover:text-gray-400">Nosotros</a></li>
+                <li><a href="#listaPedido" class="text-white hover:text-gray-400">Tu Pedido</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-content container">
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Emp. Camaron</h1>
+                                <p>La combinación perfecta de texturas y sabores. 
+                                Un delicioso rollo de sushi empanizado, crujiente por fuera y con un suculento camarón en su interior,
+                                que aporta un toque jugoso y lleno de sabor.
+                                </p>
+                                <div class="botones">
+                                    <a href="productos.html" class="btn-1">comprar</a>
+                                    <a href="#" class="btn-1">menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/Empanizado.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Avocado</h1>
+                                <p>Frescura y cremosidad en cada bocado. Nuestro Avocado Roll combina un interior suave de aguacate,
+                                philadelphia, zanahoria y pepino, envuelto en una capa extra de aguacate y un toque de salsa de anguila que realza su sabor. 
+                                Una opción ligera, equilibrada y simplemente irresistible.
+                                ¡Pruébalo y disfruta la perfección del aguacate en cada rollo!
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">comprar</a>
+                                    <a href="#" class="btn-1">menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/avocado2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Manchego</h1>
+                                <p>Una combinación irresistible de sabores y texturas. 
+                                    El Manchego Roll envuelve un delicioso relleno de surimi toreado y aguacate, 
+                                    cubierto con una capa de queso horneado que se funde a la perfección, coronado con nuestra inigualable salsa de chipotle. 
+                                    Un toque cremoso, ahumado y lleno de sabor en cada bocado. ¡Déjate sorprender!
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">comprar</a>
+                                    <a href="#" class="btn-1">menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/manche2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="products">
+        <div class="tabs container">
+
+            <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1">
+<label for="tab1">Sushi</label>
+<div class="tab">
+    <div class="swiper mySwiper-1" id="swiper1">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-img">
+                        <h4>nuevo</h4>
+                        <img src="images/Empanizado2.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h4>Emp. de Camaron</h4>
+                        <p>Interior (Aguacate, camaron y pepino)</p>
+                        <p>Exterior (Queso, philadelphia y empanizado)</p>
+                        <span class="price">$80.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-img">
+                        <h4>nuevo</h4>
+                        <img src="images/califor.webp" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h4>California</h4>
+                        <p>Interior (Camaron, pepino, philadelphia y zanahoria)</p>
+                        <p>Exterior (Ajonjoli)</p>
+                        <span class="price">$70.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-img">
+                        <h4>nuevo</h4>
+                        <img src="images/avocado.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h4>Avocado</h4>
+                        <p>Interior (Aguacate, philadelphia, zanahoria y pepino)</p>
+                        <p>Exterior (Aguacate y salsa de anguila)</p>
+                        <span class="price">$80.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-img">
+                        <h4>nuevo</h4>
+                        <img src="images/fila.webp" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h4>Fila Roll</h4>
+                        <p>Interior (Aguacate y camaron empanizado)</p>
+                        <p>Exterior (Philadelphia y tampico)</p>
+                        <span class="price">$90.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-img">
+                        <h4>nuevo</h4>
+                        <img src="images/crunch.webp" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h4>Crunch</h4>
+                        <p>Interior (Aguacate y camaron empanizado)</p>
+                        <p>Exterior (Philadelphia, empanizado y tampico)</p>
+                        <span class="price">$100.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="product">
+                    <div class="product-img">
+                        <h4>nuevo</h4>
+                        <img src="images/Manche.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h4>Manchego Roll</h4>
+                        <p>Interior (Surimi toreado y aguacate)</p>
+                        <p>Exterior (Queso horneado y salsa de chipotle)</p>
+                        <span class="price">$120.00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+            <input type="radio" name="tabs" id="tab2" checked="checked" class="tabInput" value="2">
+            <label for="tab2">Platillos y postres</label>
+            <div class="tab">
+                <div class="swiper mySwiper-2" id="swiper2">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/Yakimeshis.png" alt="">
+
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Yakimeshi</h4>
+                                    <p>Camaron empanizado, Aguacate, Tampico y Philadelphia</p>
+                                    <span class="price">$70.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/sencillo.png" alt="">
+
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Sencillo</h4>
+                                    <p>Arroz frito con salsa de anguila y Philadelphia</p>
+                                    <span class="price">$50.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/gohan.png" alt="">
+
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Gohan</h4>
+                                    <p>Natural con ajonjoli y Philadelphia</p>
+                                    <span class="price">$35.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/flan.webp" alt="">
+    
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Flan Napolitano</h4>
+                                    <p>Flan de Napolitano</p>
+                                    <span class="price">$25.00</span>
+    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/helado.png" alt="">
+    
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Helado frito</h4>
+                                    <p>Helado por dentro, crunch por fuera, experiencia unica</p>
+                                    <span class="price">$25.00</span>
+    
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <div class="product-img">
+                                <h4>nuevo</h4>
+                                <img src="images/platano.png" alt="">
+
+                            </div>
+                            <div class="product-txt">
+                                <h4>Galletas de platano</h4>
+                                <p>Galleta hecha a base de platano</p>
+                                <span class="price">$30.00</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <input type="radio" name="tabs" id="tab3" checked="checked" class="tabInput" value="3">
+            <label for="tab3">Entradas</label>
+            <div class="tab">
+                <div class="swiper mySwiper-2" id="swiper3">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/prim.png" alt="">
+
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Rollo Primavera</h4>
+                                    <p>3 rollos de harina, verdura cocida, philadelphia, con guarnicion y queso gouda</p>
+                                    <span class="price">$36.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/bander.png" alt="">
+
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Bandera gouda</h4>
+                                    <p>Banderilla, queso, guarnicion, piña y salsa de chipotle</p>
+                                    <span class="price">$45.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>nuevo</h4>
+                                    <img src="images/beb.png" alt="">
+
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Bebidas</h4>
+                                    <p>Agua de arroz</p>
+                                    <p>Agua de limon</p>
+                                    <p>Agua de jamaica</p>
+                                    <p>Te de jazmin</p>
+                                    <span class="price">$18.000</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="info container">
+        <div class="info-img">
+            <img src="images/SushiBan.webp" alt="">
+        </div>
+
+        <div class="info-txt">
+            <h2>¡PROMOCIÓN!</h2>
+            <p>Solicita la promoción del día.</p>
+            <a href="https://wa.me/5213325632017?text=¡Promoción%20del%20día%20solicitada!" class="btn-2">Más información</a>
+        </div>
+        
+        
+    </section>
+
+    <section class="horario">
+        <div class="horario-info container">
+            <h2>horario</h2>
+            <div class="horario-txt">
+                <div class="txt">
+                    <h4>Direccion</h4>
+                    <p>José María Morelos & Niños Heroes, Centro, 46400 Tequila, Jal.</p>
+                </div>
+                <div class="txt">
+                    <h4>Horario</h4>
+                    <p>Lunes a Viernes : 9 am - 8 pm</p>
+                    <p>Sabados y Domingos : 11 am - 7 pm</p>
+                </div>
+                <div class="txt">
+                    <h4>Telefono</h4>
+                    <p>3325632017</p>
+                </div>
+                <div class="txt">
+                    <h4>Redes sociales</h4>
+                    <div class="socials">
+                        <a href="#">
+                            <div class="social">
+                                <img src="images/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="images/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="images/s3.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1299TcBOHufd4nQx2rPmeUeoAOGdtSbs" width="100%" height="500"></iframe>
+
+    </section>
+
+    <footer class="footer container">
+        <img class="logo-2" src="images/LogoPeki1.png" alt="">
+        <div class="links">
+            <h4></h4>
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4></h4>
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>By Finyx</h4>
+            <ul>
+                <li><a href="https://fynyx.netlify.app/">Trabaja con fynix</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4></h4>
+            <div class="socials">
+                <a href="#">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social">
+                        <img src="images/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
